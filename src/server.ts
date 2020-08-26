@@ -1,14 +1,17 @@
 import express, { request, response } from 'express';
 
+
+import routes from './routes'
+
+
 const app = express();
-
-
+app.use(express.json());
+app.use(routes);
 
 // //  enviar requisição GET ao servidor
 // app.get('/', (request, response) => {
 //     return response.json({message: 'Hello Worlld do server.ts'});
 // })
-
 
 
 // app.post('/', (request, response) => {
